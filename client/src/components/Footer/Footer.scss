@@ -1,0 +1,65 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.footer {
+  background-color: $secondary-color;
+  color: $white;
+  padding: 60px 0 30px;
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+
+    @include respond-to(md) {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    @include respond-to(lg) {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+  }
+
+  .footer-logo {
+    img {
+      height: 40px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $dark-gray;
+      max-width: 250px;
+    }
+  }
+
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+
+    .footer-nav-column {
+      h4 {
+        color: $white;
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      ul {
+        li {
+          margin-bottom: 12px;
+
+          a {
+            color: $dark-gray;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

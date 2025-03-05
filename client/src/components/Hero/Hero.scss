@@ -1,0 +1,61 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.hero {
+  padding: 120px 0 60px;
+  background: linear-gradient(135deg, lighten($primary-color, 30%), $white);
+  overflow: hidden;
+  
+  @include respond-to(md) {
+    padding: 150px 0 80px;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+    @include respond-to(lg) {
+      flex-direction: row;
+    }
+  }
+  
+  .hero-text {
+    @include respond-to(lg) {
+      flex: 1;
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+      color: $secondary-color;
+    }
+    
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: $dark-gray;
+      max-width: 500px;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+  }
+  
+  .hero-image {
+    text-align: center;
+    
+    
+    img {
+      // max-width: 100%;
+      width: 500px;
+      object-fit: cover;
+
+      height: 500px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba($black, 0.15);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+// Şriftləri əlavə edin - fontlari assets/fonts qovluğuna yükləyin və ya Google Fonts istifadə edin
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: $font-main;
+  color: $secondary-color;
+  background-color: $white;
+}
+
+.container {
+  @include container;
+}
+
+section {
+  padding: 60px 0;
+  
+  @include respond-to(md) {
+    padding: 80px 0;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  
+  @include respond-to(md) {
+    font-size: 48px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  
+  @include respond-to(md) {
+    font-size: 36px;
+  }
+}
+
+.btn-primary {
+  @include button-primary;
+}
+
+.btn-secondary {
+  @include button-secondary;
+}
