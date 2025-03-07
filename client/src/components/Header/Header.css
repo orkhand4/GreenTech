@@ -1,0 +1,138 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  z-index: 100;
+  padding: 20px 0;
+}
+.header.scrolled {
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 10px rgba(44, 62, 80, 0.1);
+  padding: 15px 0;
+}
+.header .header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  display: inline;
+}
+.header .logo img {
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .header .logo img {
+    height: 80px;
+  }
+}
+.header .nav-menu {
+  display: none;
+}
+@media (min-width: 992px) {
+  .header .nav-menu {
+    display: block;
+  }
+}
+.header .nav-menu ul {
+  display: flex;
+  gap: 30px;
+}
+.header .nav-menu ul li a {
+  color: #27ae60;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.header .nav-menu ul li a:hover {
+  color: #2ecc71;
+}
+.header .nav-menu.active {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  z-index: 200;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav-menu.active ul {
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.header .nav-menu.active ul li a {
+  font-size: 20px;
+}
+.header .header-actions {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+.header .header-actions .phone-link {
+  font-weight: bold;
+  color: #2ecc71;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.header .header-actions .lang-switcher {
+  padding: 8px 12px;
+}
+.header .mobile-menu-toggle {
+  display: block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  z-index: 201;
+}
+@media (min-width: 992px) {
+  .header .mobile-menu-toggle {
+    display: none;
+  }
+}
+.header .mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #27ae60;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.header .mobile-menu-toggle span:nth-child(1) {
+  top: 0;
+}
+.header .mobile-menu-toggle span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header .mobile-menu-toggle span:nth-child(3) {
+  bottom: 0;
+}
+.header .mobile-menu-toggle.active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.header .mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.header .mobile-menu-toggle.active span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}/*# sourceMappingURL=Header.css.map */

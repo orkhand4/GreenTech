@@ -49,7 +49,7 @@ const Header = () => {
 
           <div className="header-actions">
             <a href="tel:+994123456789" className="phone-link">
-              +994 12 345 67 89
+              +994 12 345 67 90
             </a>
             <Link to="/register" className="btn-primary">
               Qeydiyyat
