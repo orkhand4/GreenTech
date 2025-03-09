@@ -44,6 +44,9 @@ const Header = () => {
               <li>
                 <Link to="/resources">Resurslar</Link>
               </li>
+              <li>
+                <Link to="/about">Haqqımızda</Link>  
+              </li>
             </ul>
           </nav>
 
